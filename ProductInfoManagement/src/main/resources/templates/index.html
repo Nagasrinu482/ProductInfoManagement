@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="center"> <font color="red" size="5">View All Products</font> </div>
+	
+	<br/>
+	
+	<div align="center"> <font color="red" size="5"> <a href="new">Create New Product</a> </font> </div>
+	
+	<table align="center">
+		<tr>
+			<th>ID</th>
+			<th>NAME</th>
+			<th>PRICE</th>
+			<th>DESCRIPTION</th>
+			<th colspan="2">Actions</th>
+			
+		</tr>
+		
+		<tr th:each="product : ${products}">
+			<td th:text="${product.pid}"></td>
+			<td th:text="${product.pname}"></td>
+			<td th:text="${product.price}"></td>
+			<td th:text="${product.description}"></td>
+			<td colspan="2"> 
+				<a  th:href="@{'/edit/'+${product.pid}}" >edit</a>
+			 	<a  th:href="@{'/delete/'+${product.pid}}" >delete</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

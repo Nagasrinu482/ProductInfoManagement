@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="center">
+		<br/>
+		Add New Product
+		
+		<form th:action="@{/save}" th:object="${product}" method="get">
+			<table cellpadding="10" border="0">
+				<tr>
+					<td>Product Name:</td>
+					<td> <input type="text" th:field="*{pname}"> </td>
+				</tr>
+				<tr>
+					<td>Product Price:</td>
+					<td> <input type="text" th:field="*{price}"> </td>
+				</tr>
+				<tr>
+					<td>Product Description:</td>
+					<td> <input type="text" th:field="*{description}"> </td>
+				</tr>
+				<tr>
+					<td align="center" colspan="2"> <input type="submit" value="Add Product"> </td>
+				</tr>	
+			</table>		
+		</form>
+	</div>
+</body>
+</html>
