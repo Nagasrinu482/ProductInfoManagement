@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
+	
 	<div align="center"> <font color="red" size="5">View All Products</font> </div>
 	
 	<br/>
 	
-	<div align="center"> <font color="red" size="5"> <a href="new">Create New Product</a> </font> </div>
+	<div align="center"> <font color="red" size="5"> <a href="new">Create New Product</a> </font> 
 	
-	<table align="center">
+	<br/>
+	
+	<th:block th:include="/uploadmenu"></th:block>
+	
+	
+	<br/>
+	
+	Status is: <p th:text="${param.message}"></p>
+	
+	<table border="1">
 		<tr>
 			<th>ID</th>
 			<th>NAME</th>
@@ -31,6 +41,10 @@
 			 	<a  th:href="@{'/delete/'+${product.pid}}" >delete</a>
 			</td>
 		</tr>
+		
 	</table>
+	
+	</div>
+	
 </body>
 </html>

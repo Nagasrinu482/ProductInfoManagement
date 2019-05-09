@@ -14,7 +14,7 @@ public class Product {
 	private String description;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getPid() {
 		return pid;
 	}

@@ -33,4 +33,9 @@ public class ProductService {
 	{
 		repo.deleteById(id);
 	}	
+	
+	public boolean isExist(int id)
+	{
+		return repo.existsById(id);
+	}
 }
