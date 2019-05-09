@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8">
+      <title>Upload Result</title>
+   </head>
+    
+   <body>
+      
+      <th:block th:include="/uploadmenu"></th:block>
+       
+      Description: <span th:utext="${description}"></span>
+      
+      <br/>
+      
+      <h3>Uploaded Files:</h3>
+       
+      <ul th:each="file : ${uploadedFiles}">
+         
+         <li> <a  th:href="@{'/download/'+${file.getName()}}" >download</a> </li>
+          
+      </ul>      
+   
+   </body>
+    
+</html>
