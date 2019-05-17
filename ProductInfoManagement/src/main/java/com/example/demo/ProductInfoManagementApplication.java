@@ -11,5 +11,4 @@ public class ProductInfoManagementApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProductInfoManagementApplication.class, args);
 	}
-
 }
